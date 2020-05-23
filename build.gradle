@@ -27,7 +27,8 @@ targetCompatibility = 1.8
 	dependencies {
 	    compile 'org.slf4j:slf4j-api'
 	    testCompile 'junit:junit:4.12'
-	    compile "ch.qos.logback:logback-classic"
+testCompile "org.mockito:mockito-core"	
+    compile "ch.qos.logback:logback-classic"
 	}
 	
 	
