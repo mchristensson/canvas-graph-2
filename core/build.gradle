@@ -1,0 +1,17 @@
+
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web") {
+        exclude module: "spring-boot-starter-tomcat"
+    }
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-starter-jetty")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    
+	// compile "org.springframework:spring:2.5.6"
+	// compile "org.springframework:spring-jdbc:4.1.6.RELEASE"
+	// compile "org.apache.derby:derby:10.11.1.1"
+	
+	// compile project(':analyzer')
+	// compile project(':persistance')
+}
