@@ -2,20 +2,19 @@ package org.mac.canvasgraph.ds;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
-public class DsSwimmer {
+public class DsNode {
 
-	private List<DsForkProvider> forks;
+	private List<DsCurrent> forks;
 	private double value;
 
-	public DsSwimmer(DsNetwork factory) {}
+	public DsNode(DsNetwork factory) {}
 	
-	public void fork(DsSwimmer target, double rate) {
-		getForks().add(new DsForkProvider(target, rate));
+	public void fork(DsNode target, double rate) {
+		getForks().add(new DsCurrent(target, rate));
 	}
 	
-	protected List<DsForkProvider> getForks() {
+	protected List<DsCurrent> getForks() {
 		if (this.forks == null) {
 			this.forks = new ArrayList<>();
 		}
@@ -25,7 +24,6 @@ public class DsSwimmer {
 	public void push(double value) {
 		this.value += value;
 		getForks().forEach(fork -> fork.getTarget().push(value * fork.getRatio()));
-		
 	}
 
 	public double getValue() {

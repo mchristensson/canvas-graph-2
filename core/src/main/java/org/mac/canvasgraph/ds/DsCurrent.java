@@ -2,17 +2,17 @@ package org.mac.canvasgraph.ds;
 
 
 
-public class DsForkProvider {
+public class DsCurrent {
 
-	private final DsSwimmer target;
+	private final DsNode target;
 	private final double ratio;
 
-	public DsForkProvider(DsSwimmer target, double ratio) {
+	public DsCurrent(DsNode target, double ratio) {
 		this.target = target;
 		this.ratio = ratio;
 	}
 
-	public DsSwimmer getTarget() {
+	public DsNode getTarget() {
 		return this.target;
 	}
 

@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
 import org.mac.canvasgraph.ds.DsNetwork;
 import org.mac.canvasgraph.ds.DsNetworkException;
 import org.mac.canvasgraph.ds.DsNetworkValidator;
-import org.mac.canvasgraph.ds.DsStartSwimmer;
-import org.mac.canvasgraph.ds.DsSwimmer;
+import org.mac.canvasgraph.ds.DsStartNode;
+import org.mac.canvasgraph.ds.DsNode;
 import org.mockito.InjectMocks;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.ui.Model;
@@ -48,8 +48,8 @@ public class HomeControllerTest {
 	@Test
 	public void model_swimmersAdded_noException() throws DsNetworkException {
 		DsNetwork network =	DsNetwork.getInstance();
-		DsStartSwimmer swimmerA = network.getStartNode();
-		DsStartSwimmer swimmerB = network.getStartNode();
+		DsStartNode swimmerA = network.createStartNode();
+		DsStartNode swimmerB = network.createStartNode();
 
 		DsNetworkValidator validator = dsNetwork -> {
 			assertThat("Simmare A saknas", dsNetwork.getSwimmer(swimmerA), notNullValue());
@@ -61,19 +61,20 @@ public class HomeControllerTest {
 		int inputStregthB = 20;
 
 		// Run
-		network.push(swimmerA, inputStregthA).push(swimmerB, inputStregthB)
-				.run().validate(validator);
+		network.push(swimmerA, inputStregthA)
+		.push(swimmerB, inputStregthB)
+		.validate(validator);
 	}
 
 	@Test
 	public void model_assertValuesTransferredNoRatios_noException() throws DsNetworkException {
 		DsNetwork network =	DsNetwork.getInstance();
-		DsStartSwimmer swimmerA = network.getStartNode();
-		DsSwimmer swimmerAGoal = network.getNode();
+		DsStartNode swimmerA = network.createStartNode();
+		DsNode swimmerAGoal = network.createNode();
 		swimmerA.fork(swimmerAGoal, 1);
 
-		DsStartSwimmer swimmerB = network.getStartNode();
-		DsSwimmer swimmerBGoal = network.getNode();
+		DsStartNode swimmerB = network.createStartNode();
+		DsNode swimmerBGoal = network.createNode();
 		swimmerB.fork(swimmerBGoal, 1);
 
 		DsNetworkValidator validator = dsNetwork -> {
@@ -97,18 +98,18 @@ public class HomeControllerTest {
 		network
 		.push(swimmerA, inputStregthA)
 		.push(swimmerB, inputStregthB)
-				.run().validate(validator);
+		.validate(validator);
 	}
 	
 	@Test
 	public void model_assertValuesTransferredWithRatios_noException() throws DsNetworkException {
 		DsNetwork network =	DsNetwork.getInstance();
-		DsStartSwimmer swimmerA = network.getStartNode();
-		DsSwimmer swimmerAGoal = network.getNode();
+		DsStartNode swimmerA = network.createStartNode();
+		DsNode swimmerAGoal = network.createNode();
 		swimmerA.fork(swimmerAGoal, 0.8);
 
-		DsStartSwimmer swimmerB = network.getStartNode();
-		DsSwimmer swimmerBGoal = network.getNode();
+		DsStartNode swimmerB = network.createStartNode();
+		DsNode swimmerBGoal = network.createNode();
 		swimmerB.fork(swimmerBGoal, 1);
 		swimmerA.fork(swimmerBGoal, 0.2);
 
@@ -138,18 +139,18 @@ public class HomeControllerTest {
 		network
 		.push(swimmerA, inputStregthA)
 		.push(swimmerB, inputStregthB)
-				.run().validate(validator);
+		.validate(validator);
 	}
 	
 	@Test
 	public void model_assertValuesTransferredWithRatios2_() throws DsNetworkException {
 		DsNetwork network =	DsNetwork.getInstance();
-		DsStartSwimmer swimmerA = network.getStartNode();
-		DsSwimmer swimmerAGoal = network.getNode();
+		DsStartNode swimmerA = network.createStartNode();
+		DsNode swimmerAGoal = network.createNode();
 		swimmerA.fork(swimmerAGoal, 0.8);
 
-		DsStartSwimmer swimmerB = network.getStartNode();
-		DsSwimmer swimmerBGoal = network.getNode();
+		DsStartNode swimmerB = network.createStartNode();
+		DsNode swimmerBGoal = network.createNode();
 		swimmerB.fork(swimmerBGoal, 1);
 		swimmerA.fork(swimmerBGoal, 0.2);
 
@@ -178,8 +179,7 @@ public class HomeControllerTest {
 		// Run
 		network
 		.push(swimmerA, inputStregthA)
-		.push(swimmerB, inputStregthB)
-				.run().validate(validator);
+		.push(swimmerB, inputStregthB).validate(validator);
 	}
 
 }
