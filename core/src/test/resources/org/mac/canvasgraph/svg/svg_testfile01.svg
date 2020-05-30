@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="777" height="480" style="">
+	<title>my vector image</title>                                    <!-- Created with Vector Paint - http://www.vectorpaint.yaks.com/ https://chrome.google.com/webstore/detail/hnbpdiengicdefcjecjbnjnoifekhgdo -->
+	<rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="#FFFFFF" stroke="none" />
+	<g class="currentLayer" style="">
+		<title>Layer 1</title>
+		<rect fill="#0bd5d5" stroke="#000000" stroke-width="2"
+			stroke-linejoin="round" stroke-dashoffset="" fill-rule="nonzero" id="svg_1"
+			x="77" y="74" width="307" height="28" style="color: rgb(0, 0, 0);"
+			class="" fill-opacity="1" stroke-opacity="1" />
+		<rect fill="#0bd5d5" stroke="#000000" stroke-width="2"
+			stroke-linejoin="round" stroke-dashoffset="" fill-rule="nonzero" id="svg_3"
+			x="77.11687755584717" y="153.8831171989441" width="309.701313495636"
+			height="28" style="color: rgb(0, 0, 0);" class="" fill-opacity="1"
+			stroke-opacity="1" />
+		<path fill="none" stroke="#000000" stroke-opacity="1"
+			stroke-width="1" stroke-dasharray="none" stroke-linejoin="round"
+			stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero"
+			opacity="1" marker-start="" marker-mid="" marker-end="" id="svg_12"
+			d="M115.174040703125,109.21964596955212 C164.902070703125,108.26430519906077 200.38756070312502,112.66744027102742 235.303900703125,130.15223401309163 C270.220250703125,147.63702167285595 317.259540703125,152.94669314053328 363.226000703125,153.45456518616948 "
+			style="color: rgb(0, 0, 0);" class="" />
+		<path fill="none" stroke="#000000" stroke-opacity="1"
+			stroke-width="1" stroke-dasharray="none" stroke-linejoin="round"
+			stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero"
+			opacity="1" marker-start="" marker-mid="" marker-end=""
+			d="M115.174040703125,102.72613810746105 C164.902070703125,101.77079733696971 200.38756070312502,106.17393240893635 235.303900703125,123.65872615100056 C270.220250703125,141.1435138107649 317.259540703125,146.45318527844222 363.226000703125,146.9610573240784 "
+			style="color: rgb(0, 0, 0);" class="" id="svg_22" />
+		<polyline fill="none" stroke="#6d6d6d" stroke-linejoin="round"
+			stroke-dashoffset="" fill-rule="nonzero" marker-start="" marker-mid=""
+			marker-end="" id="svg_10"
+			points="291.79741727649184,189.81819127610913 291.79741727649184,189.81819127610913 "
+			style="color: rgb(0, 0, 0);" />
+		<polyline fill="none" stroke="#6d6d6d" stroke-linejoin="round"
+			stroke-dashoffset="" fill-rule="nonzero" marker-start="" marker-mid=""
+			marker-end="" id="svg_11"
+			points="292.44677734375,191.1168975830078 292.44677734375,191.1168975830078 292.44677734375,191.1168975830078 292.44677734375,191.1168975830078 292.44677734375,191.76625061035156 292.44677734375,192.41558837890625 "
+			style="color: rgb(0, 0, 0);" class="" />
+		<polyline fill="none" stroke="#6d6d6d" stroke-linejoin="round"
+			stroke-dashoffset="" fill-rule="nonzero" marker-start="" marker-mid=""
+			marker-end="" id="svg_12"
+			points="292.4467679419274,191.1168926069803 292.4467679419274,191.1168926069803 292.4467679419274,191.1168926069803 "
+			style="color: rgb(0, 0, 0);" transform="" />
+		<rect fill="#0bd5d5" stroke="#000000" stroke-linejoin="round"
+			stroke-dashoffset="" fill-rule="nonzero" id="svg_14" x="77.81818172064686"
+			y="102.10389667671998" width="36.54545593261719" height="6.662337213754654"
+			style="color: rgb(0, 0, 0);" class="" fill-opacity="1"
+			stroke-opacity="1" />
+		<rect fill="#0bd5d5" stroke="#000000" stroke-linejoin="round"
+			stroke-dashoffset="" fill-rule="nonzero" id="svg_18" x="363.7662319711526"
+			y="145.14285641427006" width="22.558441162109375" height="8.350649535655975"
+			style="color: rgb(0, 0, 0);" class="" fill-opacity="1"
+			stroke-opacity="1" />
+	</g>
+	<defs>
+<!-- Markers like arrows goes here -->
+	</defs>
+</svg>

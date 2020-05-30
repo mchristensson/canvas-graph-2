@@ -38,7 +38,7 @@ public class DsNetworkWriterTest {
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		Writer writer = new OutputStreamWriter(bos, StandardCharsets.UTF_8);
 		
-		DsNetwork network = getDsNetwork();
+		DsNetwork network = getTestDsNetwork();
 		DsOutputHandler outputHandler = new DsSvgOutputHandlerExample();
 		try {
 			network.render(writer, outputHandler);
@@ -48,6 +48,7 @@ public class DsNetworkWriterTest {
 		}
 		
 		byte[] arr = bos.toByteArray();
+		System.out.println(new String(arr, StandardCharsets.UTF_8));
 		assertThat(arr.length, equalTo(135));
 	}
 
@@ -59,7 +60,7 @@ public class DsNetworkWriterTest {
 	 * @return
 	 * @throws DsNetworkException
 	 */
-	private DsNetwork getDsNetwork() throws DsNetworkException {
+	private DsNetwork getTestDsNetwork() throws DsNetworkException {
 		DsNetwork network =	DsNetwork.getInstance();
 		DsStartNode swimmerA = network.createStartNode();
 		DsNode swimmerAGoal = network.createNode();
